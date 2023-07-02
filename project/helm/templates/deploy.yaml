@@ -1,17 +1,17 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "techtrends.fullname" . }}
+  name: techtrends
   namespace: {{ .Values.namespace.name }}
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
-      app: {{ include "techtrends.fullname" . }}
+      app: techtrends
   template:
     metadata:
       labels:
-        app: {{ include "techtrends.fullname" . }}
+        app: techtrends
     spec:
       containers:
         - name: {{ .Chart.Name }}
