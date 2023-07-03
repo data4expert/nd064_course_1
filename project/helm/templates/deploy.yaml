@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: {{ .Chart.Name }}
-          image: data4expert/techtrends.latest
+          image: data4expert/techtrends:latest
           ports:
             - containerPort: {{ .Values.containerPort }}
           livenessProbe:
